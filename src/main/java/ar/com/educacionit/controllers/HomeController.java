@@ -13,7 +13,16 @@ public class HomeController {
 		return "home";
 	}
 	
-	public void deleteme() {
+	public String alert() {
+		return "bla";
+	}
+	
+	public void metodo2() {
 		
 	}
+	
+	public void metodo3() {
+		
+	}
+
 }
