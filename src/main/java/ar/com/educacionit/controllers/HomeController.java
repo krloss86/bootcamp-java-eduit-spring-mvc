@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 	//GET > http://localhost:8080/
-	@GetMapping(value = {"/","/home"})
+	@GetMapping(value = {"/home"})
 	public String home(Model model) {
 		//quiero ir  a la pagina home.html
 		return "home";
