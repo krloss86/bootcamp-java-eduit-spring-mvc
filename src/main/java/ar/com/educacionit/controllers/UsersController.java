@@ -3,7 +3,6 @@ package ar.com.educacionit.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -13,11 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.com.educacionit.domain.Socios;
 import ar.com.educacionit.domain.Users;
 import ar.com.educacionit.domain.UsersCategory;
-import ar.com.educacionit.enums.SocioViewsEnum;
-import ar.com.educacionit.enums.SociosKeysEnum;
 import ar.com.educacionit.services.UsersService;
 
 @Controller
