@@ -34,7 +34,7 @@ public class SociosController {
 	private SociosService sociosService;
 	
 	//http://localhost:8081/socio/all
-	@GetMapping("/list")
+	@GetMapping(value = "/list")
 	public String list(Model model) {
 
 		List<Socios> socios = this.sociosService.buscarTodos();
