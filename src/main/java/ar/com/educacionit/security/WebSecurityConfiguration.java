@@ -29,7 +29,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.
 	        authorizeRequests()
-	        .antMatchers("/").permitAll() /*solo accedera si el usuario esta logueado*/
+//	        .antMatchers("/").permitAll() /*solo accedera si el usuario esta logueado*/
 	        .antMatchers("/login").permitAll()
 	        .anyRequest().authenticated().and().csrf().disable().formLogin()
 	        .loginPage("/login").failureUrl("/login?error=true")
@@ -49,7 +49,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		web
 			.ignoring()
-			.antMatchers("/resources/**","/static/**","/css/**","/js/**","/images/**","/assests/**");
+			.antMatchers("/resources/**","/static/**","/css/**","/js/**","/images/**","/assets/**");
 	}
 	
 	@Bean
