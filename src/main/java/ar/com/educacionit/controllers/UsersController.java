@@ -51,7 +51,7 @@ public class UsersController {
 		Users entity = new Users();
 		entity.setCategory(new UsersCategory());
 		
-		ModelAndView model = new ModelAndView("/user/new");
+		ModelAndView model = new ModelAndView("user/new");
 		
 		//cargar las cateogorias desde la db usando el service
 		//List<Cate> 
@@ -71,7 +71,7 @@ public class UsersController {
 		
 		//verifico si hay errores
 		if(resul.hasErrors()) {
-			return "/user/new";	
+			return "user/new";	
 		}
 		
 		this.us.crear(user);
