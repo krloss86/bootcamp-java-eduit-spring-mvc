@@ -5,12 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-
-import ar.com.educacionit.domain.validators.MiValidador;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 /*
  * MAPEO DE ENTIDADES CON HIBERNATE
@@ -47,7 +45,13 @@ public class Socios {
 	@Column(nullable = false,length = 6,unique = true)
 	@NotEmpty
 	private String codigo;
-
+	
+	//OneToOne()
+	@ManyToOne()
+	@JoinColumn(name = "users_id", referencedColumnName = "id")
+	private Users user;
+	//EJERICIO  bidireccional en JPA
+	
 	public Long getId() {
 		return id;
 	}
@@ -78,6 +82,10 @@ public class Socios {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
+	}
+
+	public Users getUser() {
+		return user;
 	}
 	
 }
