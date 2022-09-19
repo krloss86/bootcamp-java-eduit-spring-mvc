@@ -1,7 +1,7 @@
 package ar.com.educacionit.enums;
 
 public enum CuponViewsEnum {
-
+	//heroku requiere path sin / al inicio
 	LIST("cupon/list"),
 	EDIT("cupon/edit"),
 	NEW("cupon/new"),

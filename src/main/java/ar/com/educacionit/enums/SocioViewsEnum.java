@@ -5,7 +5,7 @@ public enum SocioViewsEnum {
 	LIST("socio/list"),
 	EDIT("socio/edit"),
 	NEW("socio/new"),
-	LIST_REDIRECT("redirect:socio/list"),
+	LIST_REDIRECT("redirect:/socio/list"),
 	;
 	
 	private String view;
